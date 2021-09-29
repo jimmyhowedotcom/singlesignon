@@ -115,7 +115,7 @@ class SingleSignOnController extends Controller
             $user = new User();
             $user->name = $userArray['name'];
             $user->email = $userArray['email'];
-            $user->email_verified = $userArray['email_verified'];
+            $user->email_verified_at = $userArray['email_verified_at'];
             $user->save();
         }
         Auth::login($user);
